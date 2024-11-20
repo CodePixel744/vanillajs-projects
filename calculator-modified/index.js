@@ -1,4 +1,4 @@
-
+/*took help from ai for full loading issue and also for eval function and some repititve tasks */
 document.addEventListener("DOMContentLoaded", function () {
     let one = document.getElementById("one")
     let two = document.getElementById("two")
@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(inputSelected)
     console.log(clear)
     function appendTodisplay(value) {
+        /*this is like we are adding some characters in empty string */
+        /* in that we take empty string str="" then str+=element.value */
         document.getElementById("input").value += value;
     }
     plus.addEventListener("click", function () {

@@ -1,6 +1,7 @@
 body {
     margin: 0;
     border: 5px solid green;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
@@ -15,6 +16,7 @@ body {
     margin-top: 20px;
     height: 40px;
     width: 200px;
+    text-align: center;
 }
 
 .outer-div {
@@ -31,6 +33,8 @@ body {
     height: 60px;
     width: 60px;
     background: pink;
+    text-align: center;
+    font-size: medium;
 
 }
 
