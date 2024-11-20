@@ -5,6 +5,14 @@ body {
     text-align: center;
 }
 
+input {
+    border: 5px solid black;
+    height: 50px;
+    width: 300px;
+
+}
+
+
 span {
     border-bottom: 2px solid black;
     padding: 4px;

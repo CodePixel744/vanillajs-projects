@@ -1,9 +1,4 @@
-let num3 = prompt("enter the first number:");
-let num4 = prompt("enter the second number");
-let num1 = parseInt(num3);
-let num2 = parseInt(num4);
-document.getElementById("num1-el").textContent = num1
-document.getElementById("num2-el").textContent = num2
+
 let addbtn = document.getElementById("add")
 let subbtn = document.getElementById("sub")
 let multbtn = document.getElementById("mult")
@@ -15,33 +10,64 @@ console.log(addbtn)
 // Perform the given calculation using num1 and num2
 // Render the result of the calculation in the paragraph with id="sum-el"
 function add() {
+    let num3 = document.getElementById("first-input").value;
+    let num4 = document.getElementById("second-input").value;
+    let num1 = parseFloat(num3);
+    let num2 = parseFloat(num4);
+    if (isNaN(num1) || isNaN(num2)) {
+        return `please enter valid number.`
+    }
     return num1 + num2
 }
 function sub() {
+    let num3 = document.getElementById("first-input").value;
+    let num4 = document.getElementById("second-input").value;
+    let num1 = parseFloat(num3);
+    let num2 = parseFloat(num4);
+    if (isNaN(num1) || isNaN(num2)) {
+        return `please enter valid number.`
+    }
     return num1 - num2
 }
 function div() {
+    let num3 = document.getElementById("first-input").value;
+    let num4 = document.getElementById("second-input").value;
+    let num1 = parseFloat(num3);
+    let num2 = parseFloat(num4);
+    if (isNaN(num1) || isNaN(num2)) {
+        return `please enter valid number.`
+    }
+    if (num2 === 0) {
+        return `error you can't divide by zero.`
+    }
     return num1 / num2
 }
 function mult() {
+    let num3 = document.getElementById("first-input").value;
+    let num4 = document.getElementById("second-input").value;
+    let num1 = parseFloat(num3);
+    let num2 = parseFloat(num4);
+    if (isNaN(num1) || isNaN(num2)) {
+        return `please enter valid number.`
+    }
     return num1 * num2
 }
 function display(cases) {
     switch (cases) {
         case 'add':
-            result.textContent = `Addition is ${add()}`
+            result.innerText = `Addition is ${add()}`
             break;
         case 'sub':
-            result.textContent = `Subtraction is ${sub()}`
+            result.innerText = `Subtraction is ${sub()}`
             break;
         case 'mult':
-            result.textContent = `Multiplication is ${mult()}`
+            result.innerText = `Multiplication is ${mult()}`
             break;
         case 'div':
-            result.textContent = `Division is ${div()}`
+            result.innerText = `Division is ${div()}`
             break;
         default:
-            result.textContent = `the operation is not available`
+            result.innerText = `the operation is not available`
             break;
     }
 }
