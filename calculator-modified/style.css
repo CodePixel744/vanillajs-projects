@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    border: 5px solid green;
+}
+
+
+.outermost-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.outermost-div input {
+    margin-top: 20px;
+    height: 40px;
+    width: 200px;
+}
+
+.outer-div {
+    margin: 20px;
+    border: 3px solid brown;
+}
+
+.button-div {
+    display: flex;
+}
+
+.button-div button {
+    border: 1px solid black;
+    height: 60px;
+    width: 60px;
+    background: pink;
+
+}
+
+.button-div button:hover {
+    background: red;
+}
