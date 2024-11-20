@@ -1,5 +1,7 @@
-let num1 = 8
-let num2 = 2
+let num3 = prompt("enter the first number:");
+let num4 = prompt("enter the second number");
+let num1 = parseInt(num3);
+let num2 = parseInt(num4);
 document.getElementById("num1-el").textContent = num1
 document.getElementById("num2-el").textContent = num2
 let addbtn = document.getElementById("add")
