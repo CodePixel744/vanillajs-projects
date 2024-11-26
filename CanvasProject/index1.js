@@ -1,4 +1,5 @@
 let canvas = document.getElementById("canvas");
+let button = document.getElementById("button");
 console.log(canvas);
 console.log(typeof (canvas));
 let ctx = canvas.getContext("2d");
@@ -31,9 +32,15 @@ function checkPaddleCollision(ball, paddle) {
         ball.left < paddle.right && ball.right > paddle.left && ball.top < paddle.bottom && ball.bottom > paddle.top
     );
 }
-
+function checkRightCollision(ball) {
+    return ball.right > width;
+}
+function checkBottomCollision(ball) {
+    return ball.bottom > height;
+}
 document.addEventListener("mousemove", function (e) {
     rightpaddletop = e.y - canvas.offsetTop;
+    console.log(rightpaddletop);
 })
 /*inbuilt function which holds the vertical distance from the top of canvas element to top of its offset parent. */
 function update() {
@@ -75,6 +82,10 @@ function checkCollision() {
         /*revert speed  */
         xSpeed = -Math.abs(xSpeed);
     }
+    if (checkRightCollision(ball)) {
+        alert("Game Over");
+        resetGame();
+    }
 }
 function draw() {
     ctx.fillStyle = "black";
@@ -89,6 +100,17 @@ function draw() {
     ctx.fillStyle = "white";
     ctx.fillRect(width - PADDLE_WIDTH - PADDLE_OFFSET, rightpaddletop, PADDLE_WIDTH, PADDLE_HEIGHT);
 }
+function resetGame() {
+    ballpos = { x: 20, y: 30 };
+    xSpeed = 3;
+    ySpeed = 2;
+    leftpaddletop = 10;
+    rightpaddletop = 30;
+}
+button.addEventListener("click", function () {
+    resetGame();
+    alert("Game Restarted");
+})
 function gameLoop() {
     draw();
     update();
