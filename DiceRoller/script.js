@@ -1,14 +1,24 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     let button = document.getElementById("button");
-    button.addEventListener('click', runThis);
+    button.addEventListener('click', () => {
+        /**this function took from AI */
+        let dicebox = document.getElementsByClassName('dicebox')[0];
+        dicebox.style.transition = 'all 0.5s ease';
+        dicebox.style.opacity = '0';
+        setTimeout(() => {
+            runThis();
+            dicebox.style.opacity = '1';
+        }, 500);
+    });
+    let dicebox = document.getElementsByClassName('dicebox');
     let array = [];
-    let dicebox = document.getElementsByClassName('dicebox')
     console.log(dicebox);
     let textValue = document.getElementsByClassName('text');
     function runThis() {
         let randomNumber = Math.floor(Math.random() * 6) + 1;
         /**always forgetting this TQ AI */
         textValue[0].textContent = `the value is ${randomNumber}`;
+        textValue[0].style.backgroundImage = `linear-gradient(to right, #ff7e5f, #feb47b)`;
         array.push(randomNumber);
         createDivwithDots(array[0]);
         while (array.length != 0) {
