@@ -1,0 +1,35 @@
+.dice {
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dicebox {
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8vh;
+    /* border:2px solid black; */
+    padding: 5vh;
+}
+
+.dice .text {
+    margin: 2vh;
+    /* border:1px solid red; */
+    padding: 1vh;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.dice button {
+    height: 10vh;
+    width: 30vh;
+    border-radius: 1vh;
+}
+
+.dice button:hover {
+    cursor: pointer;
+}
