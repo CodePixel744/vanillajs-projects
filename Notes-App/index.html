@@ -4,59 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Note Taking App</title>
-    <!-- Link to CSS file -->
+    <title>Note-Taking App</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Adding Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Main container -->
     <div class="container">
-        <h1 class="heading">Note Taking App</h1>
-
-        <!-- Add note button -->
-        <button class="add-note-btn">
-            <i class="fas fa-plus"></i> Add Note
-        </button>
-
-        <!-- Notes container -->
-        <div class="notes-container">
-            <!-- Notes will be dynamically added here -->
-        </div>
+        <h1>Note-Taking App</h1>
+        <button class="button" id="addNoteBtn">+ Add Note</button>
+        <div class="notes" id="notesContainer"></div>
     </div>
 
-    <!-- Delete confirmation modal -->
-    <div class="modal" id="deleteModal">
-        <div class="modal-content">
-            <h2>Delete Note</h2>
-            <p>Are you sure you want to delete this note?</p>
-            <div class="modal-buttons">
-                <button class="confirm-delete">Delete</button>
-                <button class="cancel-delete">Cancel</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Note template (will be cloned in JavaScript) -->
-    <template id="note-template">
-        <div class="note">
-            <div class="note-header">
-                <div class="note-actions">
-                    <i class="fas fa-trash delete-note"></i>
-                </div>
-            </div>
-            <div class="note-content" contenteditable="true">
-                <!-- Note content will go here -->
-            </div>
-            <div class="note-footer">
-                <span class="timestamp"></span>
-            </div>
-        </div>
-    </template>
-
-    <!-- Link to JavaScript file -->
     <script src="script.js"></script>
 </body>
 

@@ -1,83 +1,48 @@
-* {
+html,
+body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background: linear-gradient(to bottom, #024fe8, #0447e4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .container {
-    background-color: yellow;
+    border: 1px solid #000;
+    margin: auto;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
-}
-.container:hover {
-    transform: scale(1.05);
-}
-
-.container .heading {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-bottom: 1em;
+    gap: 2em;
 }
 
 .container button {
-    margin: 1em 0;
     border: 1px solid red;
-    padding: 0.75em 1.5em;
-    border-radius: 0.5em;
-    background-color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    margin: 0.5em;
+    padding: 1.5em;
 }
 
 .container button:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.05);
-}
-
-.modal-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: aqua;
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.modal-content .modal-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 1em;
-}
-
-.modal-content .modal-buttons button {
-    margin: 0.5em;
-    border: 1px solid red;
-    padding: 0.5em 1em;
-    border-radius: 0.5em;
-    background-color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transform: scale(1.05);
 }
 
-.modal-content .modal-buttons button:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.05);
+.container button:active {
+    transform: scale(0.9);
 }
